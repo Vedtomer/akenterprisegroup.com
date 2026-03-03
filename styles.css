@@ -1,30 +1,18 @@
 /* Custom Styles for Sunil Merchandising Premium Theme */
 
-/* RemachineScript Custom Font */
-@font-face {
-  font-family: 'RemachineScript';
-  src: url('font/RemachineScript_Personal_Use.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* Logo Text Styling */
 .logo-brand-text {
-  font-family: 'RemachineScript', cursive;
+  font-family: 'Outfit', sans-serif;
   color: #D4AF37;
   line-height: 1;
-  letter-spacing: 0.05em;
-}
-.logo-ak {
-  font-size: 1.9em;
-  font-weight: normal;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
 .logo-enterprise {
-  font-size: 1.1em;
-  font-weight: normal;
-  text-transform: none;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-left: 0;
 }
 
 :root {
@@ -35,28 +23,35 @@
 }
 
 body {
+  font-family: 'Outfit', sans-serif;
   /* Prevent horizontal scroll during animations */
   overflow-x: hidden;
   /* Hide default scrollbar for Lenis */
-  scrollbar-width: none; 
+  scrollbar-width: none;
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
 
 /* Lenis Recommended CSS */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
+
 .lenis.lenis-smooth {
   scroll-behavior: auto !important;
 }
+
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
+
 .lenis.lenis-stopped {
   overflow: hidden;
 }
+
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
@@ -75,12 +70,15 @@ html.lenis, html.lenis body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
 }
+
 .nav-scrolled .nav-logo-text {
   color: white;
 }
+
 .nav-scrolled .nav-links a {
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
+
 .nav-scrolled .nav-links a:hover {
   color: var(--brand-gold);
 }
@@ -93,11 +91,27 @@ html.lenis, html.lenis body {
 
 /* Scroll Animation */
 @keyframes scroll-down {
-  0% { transform: scaleY(0); transform-origin: top; }
-  50% { transform: scaleY(1); transform-origin: top; }
-  50.1% { transform: scaleY(1); transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; }
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  50.1% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
 }
+
 .animate-scroll-down {
   animation: scroll-down 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
 }
@@ -122,6 +136,7 @@ html.lenis, html.lenis body {
   width: 10px;
   height: 10px;
 }
+
 .swiper-pagination-bullet-active {
   background-color: var(--brand-gold) !important;
   width: 24px;
@@ -133,6 +148,7 @@ html.lenis, html.lenis body {
   transform-style: preserve-3d;
   perspective: 1000px;
 }
+
 .card-inner {
   transform: translateZ(30px);
 }
