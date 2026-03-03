@@ -1,0 +1,111 @@
+/* Custom Styles for Sunil Merchandising Premium Theme */
+
+:root {
+  --brand-gold: #D4AF37;
+  --brand-dark: #0A0A0A;
+  --brand-charcoal: #1A1A1A;
+  --brand-light: #F8F9FA;
+}
+
+body {
+  /* Prevent horizontal scroll during animations */
+  overflow-x: hidden;
+  /* Hide default scrollbar for Lenis */
+  scrollbar-width: none; 
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--brand-gold);
+  color: #ffffff;
+}
+
+/* Navbar Scrolled State */
+.nav-scrolled {
+  background-color: rgba(26, 26, 26, 0.9) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+.nav-scrolled .nav-logo-text {
+  color: white;
+}
+.nav-scrolled .nav-links a {
+  color: rgba(255,255,255,0.8);
+}
+.nav-scrolled .nav-links a:hover {
+  color: var(--brand-gold);
+}
+
+/* Writing Mode */
+.writing-mode-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Scroll Animation */
+@keyframes scroll-down {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  50.1% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+.animate-scroll-down {
+  animation: scroll-down 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+/* Magnetic Button (JS handles movement, CSS handles transition) */
+.magnetic-btn {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Form Styles */
+.form-group input:-webkit-autofill,
+.form-group textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Swiper Customize */
+.swiper-pagination-bullet {
+  background-color: rgba(26, 26, 26, 0.3) !important;
+  transition: all 0.3s ease;
+  width: 10px;
+  height: 10px;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--brand-gold) !important;
+  width: 24px;
+  border-radius: 10px;
+}
+
+/* Service Card 3D Tilt container */
+.service-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.card-inner {
+  transform: translateZ(30px);
+}

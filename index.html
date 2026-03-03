@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK ENTERPRISE - Premium Import & Export</title>
+    <meta name="description" content="AK Enterprise - Premium Manufacturer and Exporter of Panipat Handloom, Rugs, Carpets, Home Textiles, and Furnishings.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37',
+                            dark: '#0A0A0A',
+                            charcoal: '#1A1A1A',
+                            light: '#F8F9FA',
+                            beige: '#F5F5DC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brand-light text-brand-dark overflow-x-hidden selection:bg-brand-gold selection:text-white">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6 px-6 md:px-12 lg:px-24">
+        <div class="max-w-7xl mx-auto flex justify-between items-center bg-transparent rounded-full px-8 py-3 nav-inner-container transition-all duration-500">
+            <a href="#" class="text-2xl font-bold tracking-widest uppercase flex items-center gap-2 z-50">
+                <span class="text-brand-gold font-serif text-3xl">AK</span>
+                <span class="hidden sm:block text-sm font-medium tracking-[0.2em] nav-logo-text">AK ENTERPRISE</span>
+            </a>
+            
+            <div class="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase nav-links">
+                <a href="index.html" class="hover:text-brand-gold transition-colors relative group">
+                    Home
+                    <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="about.html" class="hover:text-brand-gold transition-colors relative group">
+                    About Us
+                    <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="services.html" class="hover:text-brand-gold transition-colors relative group">
+                    Services
+                    <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="contact.html" class="hover:text-brand-gold transition-colors relative group">
+                    Contact
+                    <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden z-50 flex flex-col gap-1.5 focus:outline-none">
+                <span class="w-6 h-[2px] bg-current transition-transform duration-300 origin-right"></span>
+                <span class="w-6 h-[2px] bg-current transition-opacity duration-300"></span>
+                <span class="w-6 h-[2px] bg-current transition-transform duration-300 origin-right"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-dark text-white z-40 transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center">
+        <div class="flex flex-col gap-8 text-2xl font-serif text-center">
+            <a href="index.html" class="mobile-link hover:text-brand-gold transition-colors">Home</a>
+            <a href="about.html" class="mobile-link hover:text-brand-gold transition-colors">About Us</a>
+            <a href="services.html" class="mobile-link hover:text-brand-gold transition-colors">Services</a>
+            <a href="contact.html" class="mobile-link hover:text-brand-gold transition-colors">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Parallax Background Image -->
+        <div class="absolute inset-0 w-full h-full z-0">
+            <div class="hero-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" data-speed="0.5"></div>
+            <div class="absolute inset-0 bg-black/40"></div>
+            <!-- Animated Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-black/30"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 pt-32 pb-20 text-center text-white flex flex-col items-center">
+            <p class="hero-subtitle text-brand-gold font-medium tracking-[0.3em] uppercase text-sm mb-6 opacity-0 translate-y-4">Premium Handloom & Textiles From Panipat</p>
+            
+            <h1 class="hero-title font-serif text-5xl md:text-7xl lg:text-8xl font-medium leading-[1.1] mb-8 max-w-5xl mx-auto overflow-hidden">
+                <div class="overflow-hidden"><span class="block translate-y-full">Designing According</span></div>
+                <div class="overflow-hidden"><span class="block translate-y-full text-brand-gold italic">To Market Trend</span></div>
+            </h1>
+            
+            <p class="hero-text text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-12 opacity-0 font-light leading-relaxed">
+                Elegant, Traditional, and Contemporary designs. The finest handlooms, rugs, carpets, and home textiles direct from the textile city of Panipat. Uncompromisingly committed to global excellence.
+            </p>
+            
+            <div class="opacity-0 hero-cta">
+                <a href="contact.html" class="magnetic-btn inline-flex items-center justify-center px-8 py-4 bg-brand-gold text-brand-dark font-semibold tracking-widest uppercase text-sm rounded-full oververflow-hidden group relative">
+                    <span class="relative z-10">Enquire Now</span>
+                    <div class="absolute inset-0 bg-white scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0 rounded-full"></div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-70">
+            <span class="text-white text-xs tracking-widest uppercase writing-mode-vertical">Scroll</span>
+            <div class="w-[1px] h-12 bg-white/30 overflow-hidden relative">
+                <div class="absolute top-0 left-0 w-full h-full bg-white scale-y-0 origin-top animate-scroll-down"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Split Layout) -->
+    <section id="about" class="py-24 md:py-32 px-6 bg-brand-light relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <!-- Image Mask Reveal -->
+            <div class="relative h-[600px] w-full rounded-2xl overflow-hidden about-img-wrapper">
+                <div class="absolute inset-0 bg-brand-charcoal z-10 about-img-mask origin-top"></div>
+                <!-- Using the image from scraped data -->
+                <img src="https://www.sunilmerchandising.com/img/about.jpg" alt="AK Enterprise Heritage" class="w-full h-full object-cover about-img scale-110">
+                
+                <!-- Floating geometric shape -->
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-gold/20 rounded-full blur-2xl z-0"></div>
+            </div>
+            
+            <!-- Text Slide Up -->
+            <div class="flex flex-col gap-6 about-content">
+                <h3 class="text-brand-gold font-semibold tracking-[0.2em] uppercase text-sm section-subtitle">Welcome To AK Enterprise</h3>
+                <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-brand-charcoal leading-tight section-title">
+                    A dedication, hard work and sincerity is major tools to grow.
+                </h2>
+                
+                <div class="space-y-6 text-gray-600 font-light mt-4 text-lg">
+                    <p class="about-p">
+                        Welcome to AK Enterprise, rooted in Panipat, the city of weavers. We specialize in the manufacturing and export of elegant & innovative designs in Home Textiles & Furnishing. Our curated collection includes premium quality rugs, handwoven carpets, bed linens, bath luxury, and exquisite handicraft decor.
+                    </p>
+                    <p class="about-p">
+                        Operating from the heart of Haryana, we blend traditional Indian craftsmanship with modern market trends. We are uncompromisingly committed to creating textile products that are elegant, durable, and contemporarily designed to elevate spaces globally.
+                    </p>
+                </div>
+                
+                <div class="mt-8">
+                    <h4 class="text-brand-charcoal font-serif text-2xl mb-4">Why Choose AK Enterprise?</h4>
+                    <ul class="space-y-3 text-gray-600 font-light">
+                        <li class="flex items-start gap-4 about-p">
+                            <span class="text-brand-gold mt-1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            <span><strong>Direct from Panipat:</strong> Sourcing the finest handlooms, carpets, and rugs directly from the legendary textile city.</span>
+                        </li>
+                        <li class="flex items-start gap-4 about-p">
+                            <span class="text-brand-gold mt-1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            <span><strong>Custom Manufacturing:</strong> Bespoke designs and private labeling for global luxury brands and hospitality.</span>
+                        </li>
+                        <li class="flex items-start gap-4 about-p">
+                            <span class="text-brand-gold mt-1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            <span><strong>Global Export Network:</strong> Seamless shipping and dedicated export logistics across international borders.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="mt-10 about-cta">
+                    <a href="about.html" class="group flex items-center gap-4 text-brand-charcoal font-semibold uppercase tracking-widest text-sm hover:text-brand-gold transition-colors">
+                        Read Our Full Story
+                        <span class="w-10 h-10 rounded-full border border-current flex items-center justify-center group-hover:bg-brand-gold group-hover:border-brand-gold group-hover:text-white transition-all">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 md:py-32 px-6 bg-brand-charcoal text-white relative flex flex-col items-center">
+        <!-- Background subtle motion -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-brand-gold/5 blur-[120px] rounded-full"></div>
+            <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-white/5 blur-[120px] rounded-full"></div>
+        </div>
+
+        <div class="w-full max-w-7xl mx-auto relative z-10 text-center mb-20">
+            <h3 class="text-brand-gold font-semibold tracking-[0.2em] uppercase text-sm mb-4 services-subtitle">Expertise</h3>
+            <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl services-title">Explore Our Featured Services</h2>
+        </div>
+
+        <div class="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service Card 1 -->
+            <div class="service-card group relative bg-white/5 border border-white/10 rounded-2xl p-10 overflow-hidden hover:border-brand-gold/50 transition-colors duration-500 cursor-pointer">
+                <!-- Magnetic/Tilt effect applied via JS -->
+                <div class="card-inner relative z-10 flex flex-col h-full">
+                    <div class="w-16 h-16 rounded-full bg-brand-gold/10 flex items-center justify-center mb-8 text-brand-gold group-hover:scale-110 transition-transform duration-500">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    </div>
+                    <h4 class="text-2xl font-serif mb-4 group-hover:text-brand-gold transition-colors">Home Textiles & Decor</h4>
+                    <p class="text-gray-400 font-light leading-relaxed flex-grow">Elegant and contemporary home furnishings, premium bed linens, cushions, and curtains crafted to global market trends.</p>
+                </div>
+                <!-- Hover geometric effect -->
+                <div class="absolute -bottom-20 -right-20 w-40 h-40 bg-brand-gold/20 rounded-full blur-2xl group-hover:bg-brand-gold/40 transition-colors duration-700"></div>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="service-card group relative bg-white/5 border border-white/10 rounded-2xl p-10 overflow-hidden hover:border-brand-gold/50 transition-colors duration-500 cursor-pointer">
+                <div class="card-inner relative z-10 flex flex-col h-full">
+                    <div class="w-16 h-16 rounded-full bg-brand-gold/10 flex items-center justify-center mb-8 text-brand-gold group-hover:scale-110 transition-transform duration-500">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-serif mb-4 group-hover:text-brand-gold transition-colors">Rugs & Carpets</h4>
+                    <p class="text-gray-400 font-light leading-relaxed flex-grow">Authentic hand-tufted carpets, traditional durries, and modern area rugs woven by master artisans of Panipat.</p>
+                </div>
+                <div class="absolute -bottom-20 -right-20 w-40 h-40 bg-brand-gold/20 rounded-full blur-2xl group-hover:bg-brand-gold/40 transition-colors duration-700"></div>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="service-card group relative bg-white/5 border border-white/10 rounded-2xl p-10 overflow-hidden hover:border-brand-gold/50 transition-colors duration-500 cursor-pointer">
+                <div class="card-inner relative z-10 flex flex-col h-full">
+                    <div class="w-16 h-16 rounded-full bg-brand-gold/10 flex items-center justify-center mb-8 text-brand-gold group-hover:scale-110 transition-transform duration-500">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+                    </div>
+                    <h4 class="text-2xl font-serif mb-4 group-hover:text-brand-gold transition-colors">Bath Linens</h4>
+                    <p class="text-gray-400 font-light leading-relaxed flex-grow">Ultra-soft, highly absorbent luxury bath towels, robes, and mats designed for premium hospitality and personal comfort.</p>
+                </div>
+                <div class="absolute -bottom-20 -right-20 w-40 h-40 bg-brand-gold/20 rounded-full blur-2xl group-hover:bg-brand-gold/40 transition-colors duration-700"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase (Swiper) -->
+    <section class="py-24 bg-brand-light overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-16 text-center">
+            <h2 class="font-serif text-4xl md:text-5xl text-brand-charcoal showcase-title">Premium Gallery</h2>
+        </div>
+        
+        <!-- Swiper Container -->
+        <div class="swiper product-swiper w-full pb-16">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide w-[80vw] md:w-[600px] rounded-2xl overflow-hidden group">
+                    <div class="relative aspect-[4/3] w-full bg-gray-200">
+                        <img src="https://www.sunilmerchandising.com/img/1.jpg" alt="Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide w-[80vw] md:w-[600px] rounded-2xl overflow-hidden group">
+                    <div class="relative aspect-[4/3] w-full bg-gray-200">
+                        <img src="https://www.sunilmerchandising.com/img/2.jpg" alt="Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide w-[80vw] md:w-[600px] rounded-2xl overflow-hidden group">
+                    <div class="relative aspect-[4/3] w-full bg-gray-200">
+                        <img src="https://www.sunilmerchandising.com/img/3.jpg" alt="Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide w-[80vw] md:w-[600px] rounded-2xl overflow-hidden group">
+                    <div class="relative aspect-[4/3] w-full bg-gray-200">
+                        <img src="https://www.sunilmerchandising.com/img/4.jpg" alt="Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination mt-8"></div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Insights -->
+    <section class="py-24 bg-white border-y border-gray-100 relative">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="stats-content">
+                <h3 class="text-brand-gold font-semibold tracking-[0.2em] uppercase text-sm mb-4">Industry Insights</h3>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-charcoal leading-tight mb-8">The Legacy of Panipat Textiles</h2>
+                <div class="relative pl-8 border-l-2 border-brand-gold/30">
+                    <p class="text-gray-600 font-serif italic text-xl md:text-2xl leading-relaxed mb-6">
+                        Known globally as the "City of Weavers" and the "Textile City", Panipat is the heartbeat of India's handloom and home furnishing industry, blending centuries of craftsmanship with modern sustainable recycling.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-8 stats-grid">
+                <div class="text-center p-8 bg-brand-light rounded-2xl border border-gray-100 hover:border-brand-gold/30 transition-colors">
+                    <div class="text-brand-gold mb-4 flex justify-center">
+                        <!-- Simple SVG Icon instead of external image for reliability -->
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <div class="font-serif text-4xl text-brand-charcoal mb-2"><span class="counter" data-target="75">0</span>%</div>
+                    <div class="text-gray-500 text-sm tracking-widest uppercase mt-2">Of India's Blanket<br>Production</div>
+                </div>
+                
+                <div class="text-center p-8 bg-brand-light rounded-2xl border border-gray-100 hover:border-brand-gold/30 transition-colors">
+                    <div class="text-brand-gold mb-4 flex justify-center">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    </div>
+                    <div class="font-serif text-4xl text-brand-charcoal mb-2"><span class="counter" data-target="100">0</span>k+</div>
+                    <div class="text-gray-500 text-sm tracking-widest uppercase mt-2">Tonnes Recycled<br>Annually in Panipat</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 md:py-32 bg-brand-charcoal text-white relative">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="contact-info">
+                <h3 class="text-brand-gold font-semibold tracking-[0.2em] uppercase text-sm mb-4">Enquire Now Today</h3>
+                <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl mb-12">Let's discuss <br><span class="text-brand-gold italic">your requirement.</span></h2>
+                
+                <div class="space-y-8 text-gray-400 font-light">
+                    <div class="flex items-start gap-4 group">
+                        <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:border-brand-gold group-hover:text-brand-gold transition-colors">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-medium uppercase tracking-wider text-sm mb-2">Call Us</h4>
+                            <p>9541230611</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4 group">
+                        <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:border-brand-gold group-hover:text-brand-gold transition-colors">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-medium uppercase tracking-wider text-sm mb-2">Email</h4>
+                            <p>a.kenterprise0611@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4 group">
+                        <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:border-brand-gold group-hover:text-brand-gold transition-colors">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-medium uppercase tracking-wider text-sm mb-2">Location</h4>
+                            <p>#0611 , Virat Nagar Sec 13-17,</p>
+                            <p>Panipat Haryana 132103</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-wrapper bg-white/5 p-10 rounded-3xl border border-white/10 backdrop-blur-sm">
+                <form class="flex flex-col gap-8">
+                    <div class="relative form-group">
+                        <input type="text" id="name" required class="w-full bg-transparent border-b border-white/30 py-3 text-white focus:outline-none focus:border-brand-gold transition-colors peer placeholder-transparent">
+                        <label for="name" class="absolute left-0 top-3 text-white/50 cursor-text transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-xs">Your Name</label>
+                    </div>
+                    
+                    <div class="relative form-group">
+                        <input type="email" id="email" required class="w-full bg-transparent border-b border-white/30 py-3 text-white focus:outline-none focus:border-brand-gold transition-colors peer placeholder-transparent">
+                        <label for="email" class="absolute left-0 top-3 text-white/50 cursor-text transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-xs">Email Address</label>
+                    </div>
+
+                    <div class="relative form-group">
+                        <input type="text" id="subject" required class="w-full bg-transparent border-b border-white/30 py-3 text-white focus:outline-none focus:border-brand-gold transition-colors peer placeholder-transparent">
+                        <label for="subject" class="absolute left-0 top-3 text-white/50 cursor-text transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-xs">Subject</label>
+                    </div>
+                    
+                    <div class="relative form-group">
+                        <textarea id="message" rows="3" required class="w-full bg-transparent border-b border-white/30 py-3 text-white focus:outline-none focus:border-brand-gold transition-colors peer placeholder-transparent resize-none"></textarea>
+                        <label for="message" class="absolute left-0 top-3 text-white/50 cursor-text transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-xs">Your Message</label>
+                    </div>
+                    
+                    <button type="button" class="mt-4 magnetic-btn inline-flex items-center justify-center px-8 py-4 bg-white text-brand-charcoal font-semibold tracking-widest uppercase text-sm rounded-full oververflow-hidden group relative w-fit hover:text-white transition-colors duration-300">
+                        <span class="relative z-10">Send Message</span>
+                        <div class="absolute inset-0 bg-brand-gold scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0 rounded-full"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white/70 py-16 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <a href="#" class="text-2xl font-bold tracking-widest uppercase flex items-center gap-2 mb-6 block w-fit">
+                    <span class="text-brand-gold font-serif text-3xl">AK</span>
+                    <span class="text-sm font-medium tracking-[0.2em] text-white">AK ENTERPRISE</span>
+                </a>
+                <p class="font-light text-sm max-w-sm mb-6">Premium Manufacturer and Exporter operating from Panipat. Elegant & innovative designs of Home Textile, Carpets & Furnishing.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold hover:text-white transition-all">FB</a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold hover:text-white transition-all">IG</a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold hover:text-white transition-all">IN</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-serif text-xl mb-6">Quick Links</h4>
+                <ul class="space-y-3 font-light text-sm">
+                    <li><a href="index.html" class="hover:text-brand-gold transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-brand-gold transition-colors">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-brand-gold transition-colors">Services</a></li>
+                    <li><a href="contact.html" class="hover:text-brand-gold transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-serif text-xl mb-6">Newsletter</h4>
+                <p class="font-light text-sm mb-4">Subscribe to our newsletter to receive latest updates.</p>
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <input type="email" placeholder="Your email address" class="bg-white/5 border border-white/10 rounded-full px-6 py-3 text-sm focus:outline-none focus:border-brand-gold w-full text-white">
+                    <button class="bg-brand-gold text-brand-dark px-6 py-3 rounded-full font-semibold uppercase tracking-widest text-xs sm:w-auto w-full hover:bg-white transition-colors">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 text-center text-xs font-light tracking-wider">
+            &copy; 2026 AK ENTERPRISE. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Built-in unpkg URL for lenis -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

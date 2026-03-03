@@ -1,0 +1,74 @@
+SUNIL MERCHANDISING - SITE CONTENT SUMMARY
+============================================================
+
+
+==================================================
+PAGE: homepage
+URL: https://www.sunilmerchandising.com
+TITLE: SUNIL MERCHANDISING
+
+HEADINGS:
+  [h2] Welcome To Sunil Merchandising
+  [h2] Designing According To Market Trend !
+  [h2] WELCOME TO SUNIL MERCHANDISING
+  [h2] Explore Our Featured Products
+  [h2] Enquire Now Today
+  [h2] Great Achievement
+  [h2] Take a Look Our Latest Work Insides
+  [h2] What Customer Say About Us
+  [h2] Follow Us
+  [h2] Quick Links
+  [h2] Important Links
+  [h2] Newsletter
+  [h2] Need Any Help?
+
+CONTENT:
+  Home About Us Certification Home Decor Scrap Testimonials Contact Us Get A Quote Best Import , Export & Consultancy Welcome To Sunil Merchandising Read More Connect With Us A DEDICATION, HARD WORK AND SINCERITY IS MAJOR TOOLS FOR GROW THE BUSINESS!
+
+  A DEDICATION, HARD WORK AND SINCERITY IS MAJOR TOOLS FOR GROW THE BUSINESS!
+
+  Look at the sky. We are not alone. The whole universe is friendly to us and conspires only to give the best to those whom dream and work! ~ Mr. A.P.J. Kalam.
+
+  The essence of a role-playing game is that it is a group, cooperative experience! ~ Gary Gygax.
+
+  Hard work and dedication is important to success, and i have those qualities! ~ Ms. Nargis Fakhri
+
+  The secret of success is SINCERITY! ~ Mr. Jean Giraudoux
+
+  It is a pleasure to introduce our selves as we are Sourcing Agency and Exporter which is RECOGNIZED BY GOVT. OF INDIA of the elegant & innovative designs of Multi Commodities as HOME TEXTILE &FURNISHING, WOODEN FURNITURE, BRASS ACCESSORIES and Recycling Products as E-WASTE, AUTO PARTS AND SCRAPS etc.
+
+  We are SUNIL MERCHANDISING established on 2008 registered with Govt. of India, Ministry of Textile, Chamber of Commerce, Member of European Union (REX) uncompromisingly committed to creating products that are Elegant, Traditional and Contemporary.
+
+  We’ve More Then 2000+ Global Clients Clients Testimonials What Customer Say About Us Mr. Jesmond J.D.R.S., Malta
+
+  Healthy Universe UK Ltd, Scotland, United Kingdom
+
+
+CONTACT INFO:
+  phone: +000(123)456989
+  phones_found: ['']
+  emails: ['info@sunilmerchandising.com']
+  address_hint: " required="">
+
+==================================================
+PAGE: contact-us.html
+URL: https://www.sunilmerchandising.com/contact-us.html
+TITLE: SUNIL MERCHANDISING | Contact Us
+
+HEADINGS:
+  [h2] Need Any Help?
+  [h2] Follow Us
+  [h2] Quick Links
+  [h2] Important Links
+  [h2] Newsletter
+  [h2] Need Any Help?
+
+CONTENT:
+  Home About Us Certification Home Decor Scrap Testimonials Contact Us Get A Quote Contact Us Home Contact Us Location 117/118, Jagdish Nagar, 132103, Panipat, Haryana, India Email sunilmerchandising@gmail.com merchant.sunilmerchandising@gmail.com Call Us +91 981 338 4545 +91 999 65 61 925 Marketing Team +91 805 326 5123 +91 999 656 1925 (Mrs. Deepika Verma)
+
+
+CONTACT INFO:
+  phone: +000(123)456989
+  phones_found: ['']
+  emails: ['merchant.sunilmerchandising@gmail.com', 'info@sunilmerchandising.com', 'sunilmerchandising@gmail.com']
+  address_hint: " required="">
