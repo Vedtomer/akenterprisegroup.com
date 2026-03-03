@@ -1,5 +1,32 @@
 /* Custom Styles for Sunil Merchandising Premium Theme */
 
+/* RemachineScript Custom Font */
+@font-face {
+  font-family: 'RemachineScript';
+  src: url('font/RemachineScript_Personal_Use.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Logo Text Styling */
+.logo-brand-text {
+  font-family: 'RemachineScript', cursive;
+  color: #D4AF37;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+.logo-ak {
+  font-size: 1.9em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.logo-enterprise {
+  font-size: 1.1em;
+  font-weight: normal;
+  text-transform: none;
+}
+
 :root {
   --brand-gold: #D4AF37;
   --brand-dark: #0A0A0A;
