@@ -282,29 +282,31 @@ document.addEventListener("DOMContentLoaded", () => {
     // --------------------------------------------------------
     // 7. Swiper Slider (Product Showcase)
     // --------------------------------------------------------
-    const mySwiper = new Swiper('.product-swiper', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-            rotate: 20,
-            stretch: 0,
-            depth: 200,
-            modifier: 1,
-            slideShadows: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        speed: 1000
-    });
+    if (document.querySelector('.product-swiper')) {
+        const mySwiper = new Swiper('.product-swiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            speed: 1000
+        });
+    }
 
     gsap.from('.showcase-title', {
         y: 40,
