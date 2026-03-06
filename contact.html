@@ -181,6 +181,7 @@
             </div>
 
             <div class="contact-form-wrapper bg-white/5 p-10 rounded-3xl border border-white/10 backdrop-blur-sm">
+<<<<<<< HEAD
                 <!-- Success / Error Message -->
                 <div id="form-msg" class="hidden mb-6 px-5 py-4 rounded-xl text-sm font-medium"></div>
 
@@ -200,9 +201,26 @@
                         <label for="email"
                             class="absolute left-0 top-3 text-white/50 cursor-text transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-xs">Email
                             Address</label>
+=======
+                <form id="contact-form" class="flex flex-col gap-8">
+                    <div class="relative form-group">
+                        <input type="text" id="name" name="name" required class="w-full bg-transparent border-b border-white/30 py-3 text-white focus:outline-none focus:border-brand-gold transition-colors peer placeholder-transparent">
+                        <label for="name" class="absolute left-0 top-3 text-white/50 cursor-text transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-xs">Your Name</label>
+                    </div>
+                    
+                    <div class="relative form-group">
+                        <input type="email" id="email" name="email" required class="w-full bg-transparent border-b border-white/30 py-3 text-white focus:outline-none focus:border-brand-gold transition-colors peer placeholder-transparent">
+                        <label for="email" class="absolute left-0 top-3 text-white/50 cursor-text transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-xs">Email Address</label>
                     </div>
 
                     <div class="relative form-group">
+                        <input type="text" id="subject" name="subject" required class="w-full bg-transparent border-b border-white/30 py-3 text-white focus:outline-none focus:border-brand-gold transition-colors peer placeholder-transparent">
+                        <label for="subject" class="absolute left-0 top-3 text-white/50 cursor-text transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-xs">Subject</label>
+>>>>>>> 7d63ffa8b0ebcb8d13268283c1469a950b2d4281
+                    </div>
+
+                    <div class="relative form-group">
+<<<<<<< HEAD
                         <input type="text" id="subject" name="subject" required
                             class="w-full bg-transparent border-b border-white/30 py-3 text-white focus:outline-none focus:border-brand-gold transition-colors peer placeholder-transparent">
                         <label for="subject"
@@ -223,7 +241,17 @@
                         <div
                             class="absolute inset-0 bg-brand-gold scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0 rounded-full">
                         </div>
+=======
+                        <textarea id="message" name="message" rows="3" required class="w-full bg-transparent border-b border-white/30 py-3 text-white focus:outline-none focus:border-brand-gold transition-colors peer placeholder-transparent resize-none"></textarea>
+                        <label for="message" class="absolute left-0 top-3 text-white/50 cursor-text transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-xs">Your Message</label>
+                    </div>
+                    
+                    <button type="submit" id="submit-btn" class="mt-4 magnetic-btn inline-flex items-center justify-center px-8 py-4 bg-white text-brand-charcoal font-semibold tracking-widest uppercase text-sm rounded-full oververflow-hidden group relative w-fit hover:text-white transition-colors duration-300">
+                        <span class="relative z-10">Send Message</span>
+                        <div class="absolute inset-0 bg-brand-gold scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0 rounded-full"></div>
+>>>>>>> 7d63ffa8b0ebcb8d13268283c1469a950b2d4281
                     </button>
+                    <div id="form-message" class="hidden text-center py-3 rounded-xl mt-4 border text-sm transition-all duration-300"></div>
                 </form>
 
                 <script>

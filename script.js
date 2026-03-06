@@ -282,29 +282,31 @@ document.addEventListener("DOMContentLoaded", () => {
     // --------------------------------------------------------
     // 7. Swiper Slider (Product Showcase)
     // --------------------------------------------------------
-    const mySwiper = new Swiper('.product-swiper', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-            rotate: 20,
-            stretch: 0,
-            depth: 200,
-            modifier: 1,
-            slideShadows: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        speed: 1000
-    });
+    if (document.querySelector('.product-swiper')) {
+        const mySwiper = new Swiper('.product-swiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            speed: 1000
+        });
+    }
 
     gsap.from('.showcase-title', {
         y: 40,
@@ -394,6 +396,72 @@ document.addEventListener("DOMContentLoaded", () => {
             start: "top 75%",
         }
     });
+
+    // --------------------------------------------------------
+    // 10. Contact Form Submission Handling
+    // --------------------------------------------------------
+    const contactForm = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+    const submitBtn = document.getElementById('submit-btn');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Show loading state
+            if(submitBtn) {
+                const btnText = submitBtn.querySelector('span');
+                if(btnText) btnText.innerText = 'Sending...';
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.7';
+                submitBtn.style.pointerEvents = 'none';
+            }
+            
+            // Hide previous messages
+            if(formMessage) {
+                formMessage.classList.add('hidden');
+                formMessage.classList.remove('bg-green-500/20', 'border-green-500/30', 'text-green-400', 'bg-red-500/20', 'border-red-500/30', 'text-red-400');
+            }
+            
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch('send_email.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if(formMessage) {
+                    formMessage.classList.remove('hidden');
+                    formMessage.innerText = result.message;
+                    
+                    if(response.ok) {
+                        formMessage.classList.add('bg-green-500/20', 'border-green-500/30', 'text-green-400');
+                        contactForm.reset();
+                    } else {
+                        formMessage.classList.add('bg-red-500/20', 'border-red-500/30', 'text-red-400');
+                    }
+                }
+            } catch (error) {
+                if(formMessage) {
+                    formMessage.classList.remove('hidden');
+                    formMessage.classList.add('bg-red-500/20', 'border-red-500/30', 'text-red-400');
+                    formMessage.innerText = "An error occurred. Please try again later.";
+                }
+            } finally {
+                // Restore button
+                if(submitBtn) {
+                    const btnText = submitBtn.querySelector('span');
+                    if(btnText) btnText.innerText = 'Send Message';
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = '1';
+                    submitBtn.style.pointerEvents = 'auto';
+                }
+            }
+        });
+    }
     
     // Smooth scroll for nav anchor links
     document.querySelectorAll('.nav-links a, .mobile-link').forEach(anchor => {
