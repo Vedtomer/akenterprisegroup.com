@@ -1,0 +1,48 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: deploy-production
+      cancel-in-progress: false
+    steps:
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          # DEPLOY_SSH_KEY holds the private key base64-encoded (single line) so
+          # pasting it into the GitHub secrets UI can't mangle its newlines.
+          printf '%s' "${{ secrets.DEPLOY_SSH_KEY }}" | base64 -d > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keygen -y -f ~/.ssh/deploy_key > /dev/null
+
+      - name: Deploy to production server
+        run: |
+          ssh -i ~/.ssh/deploy_key -p "${{ secrets.DEPLOY_PORT }}" -o StrictHostKeyChecking=no -o ConnectTimeout=15 "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" '
+            set -e
+            cd "${{ secrets.DEPLOY_PATH }}"
+            git fetch origin main
+            git reset --hard origin/main
+
+            # Install/update composer dependencies if composer.json exists
+            if [ -f composer.json ]; then
+              PHP_BIN="php"
+              if [ -x /opt/alt/php85/usr/bin/php ]; then
+                PHP_BIN="/opt/alt/php85/usr/bin/php"
+              elif [ -x /opt/alt/php82/usr/bin/php ]; then
+                PHP_BIN="/opt/alt/php82/usr/bin/php"
+              elif [ -x /opt/alt/php81/usr/bin/php ]; then
+                PHP_BIN="/opt/alt/php81/usr/bin/php"
+              fi
+
+              if command -v composer >/dev/null 2>&1; then
+                $PHP_BIN "$(command -v composer)" install --no-dev --optimize-autoloader --no-interaction || composer install --no-dev --optimize-autoloader --no-interaction || true
+              elif [ -f /usr/local/bin/composer ]; then
+                $PHP_BIN /usr/local/bin/composer install --no-dev --optimize-autoloader --no-interaction || true
+              fi
+            fi
+          '
