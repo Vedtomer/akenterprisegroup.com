@@ -12,7 +12,7 @@
 /* Logo Text Styling */
 .logo-brand-text {
   font-family: 'Cinzel Decorative', serif;
-  color: #D4AF37;
+  color: var(--brand-gold) !important;
   line-height: 1;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -23,6 +23,7 @@
   font-weight: 700;
   margin-left: 3px;
   letter-spacing: 0.08em;
+  color: var(--brand-gold) !important;
 }
 
 :root {
@@ -66,22 +67,47 @@ html.lenis, html.lenis body {
   color: #ffffff;
 }
 
+/* Navbar Base & Scrolled Styling */
+.nav-inner-container {
+  background-color: rgba(18, 18, 18, 0.75) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  transition: all 0.4s ease;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--brand-gold) !important;
+}
+
+#mobile-menu-btn span {
+  background-color: #ffffff !important;
+}
+
 /* Navbar Scrolled State */
 .nav-scrolled {
-  background-color: rgba(26, 26, 26, 0.9) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
+  background-color: rgba(10, 10, 10, 0.95) !important;
+  border-color: rgba(212, 175, 55, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
 }
-.nav-scrolled .nav-logo-text {
-  color: white;
-}
+
 .nav-scrolled .nav-links a {
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.95);
 }
+
 .nav-scrolled .nav-links a:hover {
-  color: var(--brand-gold);
+  color: var(--brand-gold) !important;
+}
+
+.nav-scrolled .nav-logo-text {
+  color: var(--brand-gold) !important;
 }
 
 /* Writing Mode */

@@ -42,11 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbarInner.classList.add('nav-scrolled');
-            navbarInner.classList.remove('bg-transparent', 'py-3');
+            navbarInner.classList.remove('py-3');
             navbarInner.classList.add('py-4');
         } else {
             navbarInner.classList.remove('nav-scrolled');
-            navbarInner.classList.add('bg-transparent', 'py-3');
+            navbarInner.classList.add('py-3');
             navbarInner.classList.remove('py-4');
         }
     });
