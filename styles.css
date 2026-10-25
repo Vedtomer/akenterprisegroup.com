@@ -1,5 +1,14 @@
 /* Custom Styles for Sunil Merchandising Premium Theme */
 
+/* Great Vibes Cursive Calligraphy Font */
+@font-face {
+  font-family: 'Great Vibes';
+  src: url('font/GreatVibes-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Cinzel Decorative Custom Font */
 @font-face {
   font-family: 'Cinzel Decorative';
@@ -11,19 +20,20 @@
 
 /* Logo Text Styling */
 .logo-brand-text {
-  font-family: 'Cinzel Decorative', serif;
   color: var(--brand-gold) !important;
   line-height: 1;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .logo-enterprise {
-  font-size: 1.25em;
-  font-weight: 700;
-  margin-left: 3px;
-  letter-spacing: 0.08em;
+  font-family: 'Great Vibes', cursive !important;
+  font-size: 1.85em;
+  font-weight: 400;
+  margin-left: 6px;
+  letter-spacing: 0.03em;
+  text-transform: none !important;
   color: var(--brand-gold) !important;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 :root {
