@@ -168,6 +168,49 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // 1-by-1 Automatic Slideshow for About Section
+    const slideshowContainers = document.querySelectorAll('.about-img-wrapper');
+    slideshowContainers.forEach(container => {
+        const slides = container.querySelectorAll('.about-slide');
+        const indicators = container.querySelectorAll('.slide-indicator');
+        if (slides.length > 1) {
+            let current = 0;
+            const goToSlide = (nextIndex) => {
+                slides[current].classList.remove('opacity-100');
+                slides[current].classList.add('opacity-0');
+                if (indicators[current]) {
+                    indicators[current].classList.remove('w-7', 'bg-brand-gold');
+                    indicators[current].classList.add('w-2', 'bg-white/40');
+                }
+
+                current = nextIndex;
+
+                slides[current].classList.remove('opacity-0');
+                slides[current].classList.add('opacity-100');
+                if (indicators[current]) {
+                    indicators[current].classList.remove('w-2', 'bg-white/40');
+                    indicators[current].classList.add('w-7', 'bg-brand-gold');
+                }
+            };
+
+            let slideInterval = setInterval(() => {
+                goToSlide((current + 1) % slides.length);
+            }, 3500);
+
+            indicators.forEach((dot, index) => {
+                dot.style.cursor = 'pointer';
+                dot.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    clearInterval(slideInterval);
+                    goToSlide(index);
+                    slideInterval = setInterval(() => {
+                        goToSlide((current + 1) % slides.length);
+                    }, 3500);
+                });
+            });
+        }
+    });
+
     // --------------------------------------------------------
     // 5. Services Cards Hover & Reveal
     // --------------------------------------------------------

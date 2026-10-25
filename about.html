@@ -97,46 +97,61 @@
     <!-- About Section (Split Layout) -->
     <section id="about" class="py-24 md:py-32 px-6 bg-brand-light relative z-10">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <!-- Image Mask Reveal -->
-            <div class="relative h-[600px] w-full rounded-2xl overflow-hidden about-img-wrapper">
+            <!-- Image Mask Reveal & 1-by-1 Slideshow -->
+            <div class="relative h-[450px] sm:h-[520px] md:h-[600px] w-full rounded-2xl overflow-hidden about-img-wrapper group shadow-2xl">
                 <div class="absolute inset-0 bg-brand-charcoal z-10 about-img-mask origin-top"></div>
-                <!-- Using local image for heritage -->
-                <img src="Image/about.jpg" alt="AK Enterprise Heritage" class="w-full h-full object-cover about-img scale-110">
+                
+                <!-- 1-by-1 Animated Slideshow Container -->
+                <div class="about-slideshow absolute inset-0 w-full h-full">
+                    <img src="Image/handloom-throws-1.jpg" alt="AK Enterprise Handcrafted Herringbone Cotton Throws" class="about-slide about-img absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100 scale-110">
+                    <img src="Image/handloom-throws-2.jpg" alt="AK Enterprise Luxury Bedroom Handloom Throw Blanket" class="about-slide about-img absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 scale-110">
+                </div>
+
+                <!-- Slide Indicators & Luxury Tag -->
+                <div class="absolute bottom-6 left-6 right-6 z-20 flex items-center justify-between pointer-events-none">
+                    <div class="flex items-center gap-2 bg-brand-charcoal/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-lg pointer-events-auto">
+                        <span class="slide-indicator w-7 h-1.5 rounded-full bg-brand-gold transition-all duration-500"></span>
+                        <span class="slide-indicator w-2 h-1.5 rounded-full bg-white/40 transition-all duration-500"></span>
+                    </div>
+                    <span class="text-xs tracking-wider uppercase font-semibold text-white/90 bg-brand-charcoal/80 backdrop-blur-md px-3.5 py-2 rounded-full border border-white/10 shadow-lg pointer-events-auto">
+                        Artisan Handloom
+                    </span>
+                </div>
                 
                 <!-- Floating geometric shape -->
-                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-gold/20 rounded-full blur-2xl z-0"></div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-gold/20 rounded-full blur-2xl z-0 pointer-events-none"></div>
             </div>
             
             <!-- Text Slide Up -->
             <div class="flex flex-col gap-6 about-content">
                 <h3 class="text-brand-gold font-semibold tracking-[0.2em] uppercase text-sm section-subtitle">The City of Weavers</h3>
                 <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-brand-charcoal leading-tight section-title">
-                    Rooted in deeply woven Indian heritage and modern sustainability.
+                    Rooted in Panipat's Handloom Heritage & Sustainable Luxury.
                 </h2>
                 
                 <div class="space-y-6 text-gray-600 font-light mt-4 text-lg">
                     <p class="about-p">
-                        Welcome to AK Enterprise, proudly operating from Panipat, Haryana—globally recognized as the "City of Weavers." Our city's legacy in textiles stretches back centuries, evolving from historic handloom craftsmanship to becoming Asia's largest textile recycling hub today.
+                        Welcome to AK Enterprise, proudly operating from Panipat, Haryana—globally celebrated as the "City of Weavers." Our handloom legacy stretches back generations, marrying authentic craftsmanship with contemporary world-class textile design.
                     </p>
                     <p class="about-p">
-                        We are a leading manufacturer and exporter specializing in premium home furnishings, rugs, hand-tufted carpets, and bath linens. Taking advantage of Panipat's immense infrastructure, which processes over 100,000 tonnes of recycled garments annually and accounts for nearly 75% of India's blanket production, we blend authentic Indian artistry with global market trends.
+                        We specialize in producing signature artisanal herringbone throws, luxury bedspreads, and custom home furnishings. Handcrafted with combed natural fibers, eco-conscious recycled yarns, and hand-finished tassels, our creations deliver timeless texture, supreme comfort, and unmatched elegance to homes across the globe.
                     </p>
                 </div>
                 
                 <div class="mt-8">
-                    <h4 class="text-brand-charcoal font-serif text-2xl mb-4">Industry Insights & Strengths</h4>
+                    <h4 class="text-brand-charcoal font-serif text-2xl mb-4">Artisan Craftsmanship & Strengths</h4>
                     <ul class="space-y-3 text-gray-600 font-light">
                         <li class="flex items-start gap-4 about-p">
                             <span class="text-brand-gold mt-1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                            <span><strong>Circular Economy Leaders:</strong> Panipat pioneers the sustainable transformation of discarded fabrics into high-quality yarn, significantly reducing global textile waste.</span>
+                            <span><strong>Heritage Handloom Weaving:</strong> Authentic herringbone, waffle, and geometric patterns woven on traditional looms by master artisans.</span>
                         </li>
                         <li class="flex items-start gap-4 about-p">
                             <span class="text-brand-gold mt-1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                            <span><strong>Unmatched Production Scale:</strong> Access to a workforce of over 800,000 skilled artisans and modern MSMEs allowing for both bespoke luxury and high-volume output.</span>
+                            <span><strong>Custom OEM & Hospitality:</strong> Comprehensive bespoke capabilities in color dyes, weights, packaging, and private label branding.</span>
                         </li>
                         <li class="flex items-start gap-4 about-p">
                             <span class="text-brand-gold mt-1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-                            <span><strong>Export Excellence:</strong> Dedicated export channels reaching out to major global markets including the USA, Europe, Japan, and Australia.</span>
+                            <span><strong>Global Export Reliability:</strong> Established distribution channels delivering premium home textiles to North America, Europe, Australia, and the Middle East.</span>
                         </li>
                     </ul>
                 </div>
