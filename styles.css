@@ -1,18 +1,28 @@
 /* Custom Styles for Sunil Merchandising Premium Theme */
 
+/* Cinzel Decorative Custom Font */
+@font-face {
+  font-family: 'Cinzel Decorative';
+  src: url('font/CinzelDecorative-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Logo Text Styling */
 .logo-brand-text {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Cinzel Decorative', serif;
   color: #D4AF37;
   line-height: 1;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .logo-enterprise {
-  font-size: 1.4em;
-  font-weight: 600;
-  margin-left: 0;
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-left: 3px;
+  letter-spacing: 0.08em;
 }
 
 :root {
